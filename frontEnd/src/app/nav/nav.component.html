@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+  <button mat-button routerLink="/">MyCompany</button>
+  <button mat-button routerLink="/">Home</button>
+  <span style="flex: 1 1 auto"></span>
+  <button mat-button>SignUp</button>
+  <button mat-button  (click) = "auth.login()">Login</button>
+
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="">Update Account</button>
+    <button mat-button>Logout</button>
+  </mat-menu>
+</mat-toolbar>
